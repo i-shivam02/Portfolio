@@ -23,7 +23,7 @@ body.dark .toggle-btn { border-color:#00bfff; }
 .hero a:hover { opacity:0.8; }
 .resume-btn { background:#28a745; }
 .resume-btn:hover { background:#218838; }
-.typing { border-right:2px solid white; padding-right:5px; white-space:nowrap; overflow:hidden; }
+.typing { border-right: 2px solid white; white-space: nowrap; overflow: hidden; }
 
 /* Sections */
 section { padding:5rem 5%; opacity:0; transform:translateY(30px); transition:opacity 1s, transform 1s; }
@@ -57,5 +57,9 @@ button:hover { opacity:0.8; }
 /* Footer */
 footer { text-align:center; padding:2rem 0; background:#f0f8ff; margin-top:2rem; }
 body.dark footer { background:#1a1a1a; }
+
+/* Blinking cursor */
+.typing::after { content:'|'; animation: blink 0.7s infinite; }
+@keyframes blink { 0%, 50%, 100% { opacity:1; } 25%, 75% { opacity:0; } }
 
 @media(max-width:768px){ .about { flex-direction:column; } .hero h1 { font-size:2.5rem; } }
